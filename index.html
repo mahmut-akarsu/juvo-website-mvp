@@ -17,7 +17,6 @@
     <!-- Font Awesome İkon Kütüphanesi -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
-<script src="script.js"></script>
 <body>
 
     <!-- ÜST MENÜ (HEADER) -->
@@ -40,16 +39,25 @@
     <!-- ANA GÖVDE (KAYDIRILAN BÖLÜMLER) -->
     <main>
         <!-- BÖLÜM 1: HERO ALANI -->
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1>MVP TASARLAMAK<br><span class="highlight">JUVO'NUN İŞİ</span></h1>
-                <p>Start-up'ınız için hızlı, etkili ve yenilikçi çözümlerle geleceğin ürününü bugünden inşa ediyoruz.</p>
-                <div class="hero-buttons">
-                    <a href="#iletisim" class="btn btn-primary">Projenizi Anlatın</a>
-                    <a href="#hizmetlerimiz" class="btn btn-secondary">Hizmetlerimizi Keşfedin</a>
-                </div>
-            </div>
-        </section>
+        <!-- BÖLÜM 1: HERO ALANI -->
+<section id="hero" class="hero-section">
+    
+    <!-- ARKA PLAN VİDEOSU EKLENDİ -->
+    <video autoplay loop muted playsinline id="hero-video">
+        <source src="assets/banner_vawe.mp4" type="video/mp4">
+        <!-- Tarayıcı videoyu desteklemezse bu yazı görünür -->
+        Tarayıcınız video etiketini desteklemiyor.
+    </video>
+
+    <div class="hero-content">
+        <h1>MVP TASARLAMAK<br><span class="highlight">JUVO'NUN İŞİ</span></h1>
+        <p>Start-up'ınız için hızlı, etkili ve yenilikçi çözümlerle geleceğin ürününü bugünden inşa ediyoruz.</p>
+        <div class="hero-buttons">
+            <a href="#iletisim" class="btn btn-primary">Projenizi Anlatın</a>
+            <a href="#hizmetlerimiz" class="btn btn-secondary">Hizmetlerimizi Keşfedin</a>
+        </div>
+    </div>
+</section>
 
         <!-- BÖLÜM 2: HAKKIMIZDA -->
         <section id="hakkimizda">
@@ -61,34 +69,37 @@
             </div>
         </section>
 
-        <!-- BÖLÜM 3: HİZMETLERİMİZ -->
-        <section id="hizmetlerimiz">
-            <div class="container">
-                <h2>NELER YAPIYORUZ?</h2>
-                <div class="grid">
-                    <div class="card">
-                        <i class="fas fa-mobile-alt fa-3x"></i>
-                        <h3>Mobil Uygulama Geliştirme</h3>
-                        <p>Kullanıcı deneyimini merkeze alan, iOS ve Android platformlarında performans odaklı, ölçeklenebilir ve estetik mobil uygulamalar geliştiriyoruz.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-desktop fa-3x"></i>
-                        <h3>Web & Masaüstü Çözümleri</h3>
-                        <p>Modern teknolojileri kullanarak işletmenizin ihtiyaçlarına özel, güvenli ve kullanıcı dostu web platformları ve masaüstü uygulamaları inşa ediyoruz.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-cogs fa-3x"></i>
-                        <h3>CRM ve Özel Yazılımlar</h3>
-                        <p>Müşteri ilişkileri yönetiminizi (CRM) dijitalleştiren ve iş akışlarınızı otomatize eden, tamamen size özel yazılım çözümleri sunuyoruz.</p>
-                    </div>
-                     <div class="card">
-                        <i class="fas fa-robot fa-3x"></i>
-                        <h3>Yazılım Otomasyonları ve Botlar</h3>
-                        <p>Tekrarlayan görevlerinizi akıllı otomasyon sistemleri ve botlarla otomatikleştirerek verimliliğinizi artırıyor, maliyetlerinizi düşürüyoruz.</p>
-                    </div>
+       <!-- BÖLÜM 3: HİZMETLERİMİZ (GÜNCELLENMİŞ) -->
+<section id="hizmetlerimiz">
+    <div class="container">
+        <h2>NELER YAPIYORUZ?</h2>
+        <div class="grid">
+            <!-- Her kart bir link (<a>) ile sarıldı -->
+            <a class="service-card-link">
+                <div class="card">
+                    <i class="fas fa-mobile-alt fa-3x"></i>
+                    <h3>Mobil Uygulama Geliştirme</h3>
+                    <p>Kullanıcı deneyimini merkeze alan, iOS ve Android platformlarında performans odaklı, ölçeklenebilir ve estetik mobil uygulamalar geliştiriyoruz.</p>
                 </div>
-            </div>
-        </section>
+            </a>
+            
+            <a  class="service-card-link">
+                <div class="card">
+                    <i class="fas fa-desktop fa-3x"></i>
+                    <h3>Web & Masaüstü Çözümleri</h3>
+                    <p>Modern teknolojileri kullanarak işletmenizin ihtiyaçlarına özel, güvenli ve kullanıcı dostu web platformları ve masaüstü uygulamaları inşa ediyoruz.</p>
+                </div>
+            </a>
+            <a  class="service-card-link">
+                <div class="card">
+                    <i class="fas fa-robot fa-3x"></i>
+                    <h3>Yazılım Otomasyonları ve Botlar</h3>
+                    <p>Tekrarlayan görevlerinizi akıllı otomasyon sistemleri ve botlarla otomatikleştirerek verimliliğinizi artırıyor, maliyetlerinizi düşürüyoruz.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
 
         <!-- BÖLÜM 4: UZMANLIK ALANLARIMIZ -->
         <section id="sektorel-cozumlerimiz">
@@ -102,7 +113,7 @@
                     </div>
                     <div class="card">
                         <i class="fas fa-passport fa-3x"></i>
-                        <h3>Vize Danışmanlık Şirketleri</h3>
+                        <h3>Turizm Şirketleri</h3>
                         <p>Başvuru süreçlerini otomatize eden, randevu takibini kolaylaştıran akıllı randevu botları ve müşteri bilgi yönetim sistemleri geliştiriyoruz.</p>
                     </div>
                     <div class="card">
@@ -151,6 +162,7 @@
             &copy; 2025 Juvo Impact. Tüm Hakları Saklıdır.
         </div>
     </footer>
+    <script src="script.js"></script>
 
     <!-- JavaScript dosyası burada veya head içinde çağrılabilir -->
     <!-- <script src="script.js"></script> -->
